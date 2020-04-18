@@ -48,10 +48,6 @@ function Table({ columns, data }) {
     useSortBy
   )
 
-  // We don't want to render all 2000 rows for this example, so cap
-  // it at 20 for this use case
-  // const firstPageRows = rows.slice(0, 20)
-
   return (
     <>
       <table {...getTableProps()}>
@@ -125,6 +121,24 @@ function App() {
           {
             Header: 'Sort by Location',
             accessor: 'location',
+          }
+        ],
+      },
+      {
+        Header: 'Email',
+        columns: [
+          {
+            Header: 'Sort by Email',
+            accessor: 'email',
+          }
+        ],
+      },
+      {
+        Header: 'Phone Number',
+        columns: [
+          {
+            Header: 'Sort by Phone Number',
+            accessor: 'phone',
           }
         ],
       },
